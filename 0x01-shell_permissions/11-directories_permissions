@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod a+rwx,g-rw,o-rw
+chmod -RX 711 .
