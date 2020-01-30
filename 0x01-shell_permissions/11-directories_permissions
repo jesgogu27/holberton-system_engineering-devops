@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -RX 711 .
+chmod -R g=X,o=X ./
