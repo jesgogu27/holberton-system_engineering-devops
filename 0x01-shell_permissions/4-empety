@@ -1,2 +1,2 @@
-#!/nano/bin
+#!/bin/bash
 touch hello
