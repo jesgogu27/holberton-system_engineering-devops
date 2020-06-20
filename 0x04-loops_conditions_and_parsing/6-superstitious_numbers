@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-
+#Script Case that show bad luck from china if number is 4
+# Show bad luck from japan if number is 9
+# Show bad luck from italy if number is 17
 
 i=1
 while [ $i -le 20 ]
