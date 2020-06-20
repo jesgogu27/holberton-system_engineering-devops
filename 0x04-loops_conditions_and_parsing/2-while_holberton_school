@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
+#Scrip that executed while loop
+
 i=0
 
-while [ $i -le 10 ]
+while [ $i -lt 10 ]
 do
 	echo "Holberton School"
 	i=$((i + 1))
