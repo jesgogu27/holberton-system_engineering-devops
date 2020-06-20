@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Bash script that show bad ludk if number is 4
+# show good look if number is 8
+# in other case show Holberton school
+
+i=1
+while [ $i -le 10 ]
+do
+	if [ "$i" -eq "4" ]; then
+	     	echo "bad luck"
+	elif [ "$i" -eq "8" ]; then
+	       	echo "good luck"
+	else
+		echo "Holberton School"
+	fi
+	(( i++ ))
+done
