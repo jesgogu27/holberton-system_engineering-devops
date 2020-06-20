@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#Scrip that executed while loop
+
+i=0
+
+while [ $i -le 10 ]
+do
+	echo "Holberton School"
+	if [[ "$i" -eq "9" ]]; then
+		#statements
+		echo "Hi"
+	fi
+	i=$((i + 1))
+done
