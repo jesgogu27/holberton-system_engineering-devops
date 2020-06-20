@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Scrip that executed while loop
+#Scrip that executed until loop
 
 i=0
 
