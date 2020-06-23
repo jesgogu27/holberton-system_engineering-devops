@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying I am invincible!!! when receiving a SIGTERM signal
+# Write a Bash script that kills the process 7-highlander.
 while true
 do
     echo "To infinity and beyond"
