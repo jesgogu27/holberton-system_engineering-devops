@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-#key-pair
-ssh-keygen -f holberton -N betty -b 4096
