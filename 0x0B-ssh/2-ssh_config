@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#client configuration file
+Host holberton
+	HostName 35.196.46.151
+	User ubuntu
+	Port 22
+	IdentityFile ~/.ssh/holberton
+	
