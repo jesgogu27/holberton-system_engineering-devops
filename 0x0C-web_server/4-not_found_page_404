@@ -7,7 +7,7 @@ sudo service nginx start
 sudo chmod -R 777 /etc/nginx
 n_f="location /redirect_me {\nrewrite ^/(.*)$ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\n}\n"
 sudo sed -i "30i $n_f" /etc/nginx/sites-available/default
-echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
+sudo echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
 error_page="error_page 404 /custom_404.html;\nlocation = /custom_404.html {\nroot /usr/share/nginx/html;\ninternal;\n}\n"
 sudo sed -i "33i $error_page" /etc/nginx/sites-available/default
 sudo service nginx restart
