@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 # Install NGINX server, set mensaje and redirection the server
-apt-get -y update
-apt-get -y install nginx
-echo "Holberton School" > /var/www/html/index.nginx-debian.html
-sudo mkdir /var/www/error
-echo "Ceci n'est pas une page" > /var/www/error/404.html
-sed -i '/server_name _/a location /redirect_me { return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4; }' /etc/nginx/sites-available/default
-sed -i '/server_name _/a error_page 404 /404.html; location = /404.html {root /var/www/error/;internal; }' /etc/nginx/sites-available/default
-service nginx restart
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo service nginx start
+sudo chmod -R 777 /etc/nginx
+n_f="location /redirect_me {\nrewrite ^/(.*)$ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\n}\n"
+sudo sed -i "30i $n_f" /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
+error_page="error_page 404 /custom_404.html;\nlocation = /custom_404.html {\nroot /usr/share/nginx/html;\ninternal;\n}\n"
+sudo sed -i "33i $error_page" /etc/nginx/sites-available/default
+sudo service nginx restart
