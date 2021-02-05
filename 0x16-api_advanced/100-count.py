@@ -1,4 +1,4 @@
- #!/usr/bin/python3
+#!/usr/bin/python3
 '''Count it'''
 import requests
 import sys
@@ -10,7 +10,7 @@ def search(subreddit, word):
     """
     url = 'https://www.reddit.com/r/{}/hot.json?after={}'.format(
         subreddit, word.get('after'))
-    user_agent = {'User-Agent': 'dagute'}
+    user_agent = {'User-Agent': 'jesgogu27'}
 
     req = requests.get(url, headers=user_agent).json()
 
