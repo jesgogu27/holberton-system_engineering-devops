@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 '''Count it'''
 import requests
-import sys
 
 
 def search(subreddit, word):
