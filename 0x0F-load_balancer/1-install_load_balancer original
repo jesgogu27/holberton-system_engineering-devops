@@ -1,0 +1,19 @@
+# Serve a web page using nginx
+
+#apt-get update
+#apt-get -y install haproxy
+
+#cat <<EOM >> /etc/haproxy/haproxy.cfg
+#frontend 1535-lb-01
+#    bind *:80
+#    mode http
+#    option forwardfor
+#    default_backend servers
+#backend servers
+#    balance roundrobin
+#    server web-01 35.196.46.151
+#    server web-02 34.73.33.136
+#EOM
+
+#sudo service haproxy start
+# Install and configure HAproxy on your lb-01 server
